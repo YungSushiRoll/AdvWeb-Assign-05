@@ -5,9 +5,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using UserRoleAdmin.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace UserRoleAdmin.Controllers
 {
+    [Authorize]
     public class RolesController : Controller
     {
         private RoleManager<IdentityRole> roleManager;
